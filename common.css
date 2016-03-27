@@ -1,0 +1,13 @@
+html {
+	font-size: 16px;
+}
+img {
+	border: 0;
+}
+.comments {
+	margin: 2em;
+	padding: 1em;
+	background: #ffc;
+	border: 1px solid #993;
+	color: #993;
+}
