@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>服务项目</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<style>
+html {
+	font-size: 16px;
+}
+body {
+	margin: 1em;
+}
+ul {
+	padding: 0;
+}
+h2 {
+	color: #07b;
+	font-size: 20px;
+	font-weight: bold;
+}
+li {
+	margin-left: 2em;
+}
+strong {
+	font-size: 18px;
+	font-weight: bold;
+}
+.normal {
+	font-size: 16px;
+	font-weight: normal;
+}
+</style>
+</head>
+<body>
+<h2>健康管理中心服务套餐</h2>
+<div>
+	<div><strong>Ａ套餐</strong>（针对健康或亚健康人群）</div>
+	<ul>
+		<li>病史采集和体征检查</li>
+		<li>全面客观反映健康状况的常规体检一次</li>
+		<li>针对个人的特殊专项体检一次</li>
+		<li>提供可实时监控和收集健康数据的智能可穿戴设备一台</li>
+		<li>安排专家门诊及影像中心的检查，享受八折优惠</li>
+	</ul>
+	<div><strong>Ｂ套餐</strong>（针对慢病人群）</div>
+	<ul>
+		<li>包括A套餐内容</li>
+		<li>针对经过79医疗专家确诊的高血压、高血脂、高血糖、高尿酸血症、夜间睡眠呼吸暂停综合征、乙肝病毒携带者、退行性骨关节病等不同的慢病表现，实施不同的慢病管理</li>
+	</ul>
+</div>
+
+<h2>专家门诊服务项目</h2>
+<div>由中山医79级各科专家作为专家门诊的主诊医生，为每位就诊者提供30分钟的诊病时间。常规药品免费，进口药、合资药按国家零售价收费。</div>
+
+<h2>医疗咨询服务项目</h2>
+<div>
+	<div><strong>门诊</strong></div>
+	<ul>
+		<li>专人专科预约陪送</li>
+		<li>指定专家诊病预约陪送</li>
+	</ul>
+	<div><strong>入院</strong></div>
+	<ul>
+		<li>择期、非指定安排入院服务</li>
+		<li>择期、指定医院指定教授指定科室的安排入院服务</li>
+		<li>非择期、非指定的入院安排服务</li>
+		<li>非择期、指定的入院安排服务；</li>
+		<li>临时客户（自找、基层送上）入院安排服务</li>
+	</ul>
+	<div><strong>手术</strong></div>
+	<ul>
+		<li>择期、非指定的手术安排</li>
+		<li>择期、指定手术安排</li>
+		<li>非择期、非指定手术安排</li>
+		<li>非择期、指定手术安排</li>
+	</ul>
+</div>
+
+<h2>影像中心服务项目</h2>
+<div>按照专家门诊专家的建议，由影像中心的影像专家实施专门检查。接受外院检查X光、CT、磁共振、PET-CT等阅片会诊。</div>
+
+<h2>特殊检查套餐<span class='normal'>（针对PET、CT、MRI、无痛胃肠镜等）</span></h2>
+<div>
+	<ul>
+		<li>择期、非指定的特殊检查</li>
+		<li>择期、指定特殊检查</li>
+		<li>非择期、非指定特殊检查</li>
+		<li>非择期、指定特殊检查</li>
+	</ul>
+</div>
+
+<script>
+document.body.onclick = function(event) {
+	event = event || window.event;
+	var target = event.target || event.srcElement;
+	if (target.nodeName == 'H2') {
+		alert(target);
+		var className = target.className
+	}
+}
+</script>
+</body>
+</html>
