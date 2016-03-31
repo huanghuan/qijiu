@@ -32,27 +32,41 @@ body {
 strong {
 	font-size: 20px;
 }
+#detail {
+	position: fixed;
+	background: #ffc;
+	_border-top: 0.5em solid #07c;
+	top: 100%;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.5s;
+}
+.detail #detail {
+	top: 0;
+	opacity: 0.9;
+}
 </style>
 </head>
-<body>
-<div class='it'>
-<img class='tn' src='images/doctor.png'>
-<div class='hd'><strong>余学清</strong>　主任医师、教授</div>
-<div class='bd'>中山医科大学第一附属医院　肾内科</div>
-<div class='bd'>擅长：</div>
-</div>
-<div class='it'>
-<img class='tn' src='images/doctor.png'>
-<div class='hd'><strong>陈旻湖</strong>　主任医师、教授</div>
-<div class='bd'>中山医科大学第一附属医院　消化内科</div>
-<div class='bd'>擅长：</div>
-</div>
-<div class='it'>
-<img class='tn' src='images/doctor.png'>
-<div class='hd'><strong>杨岫岩</strong>　主任医师、教授</div>
-<div class='bd'>中山医科大学第一附属医院　风湿内科</div>
-<div class='bd'>擅长：</div>
-</div>
-<div class='comments'>专家头像和擅长领域是否需要补充一下？还是显示行政职务和学术职务？</div>
+<body onclick='showDetail()'>
+<div id='list'></div><div id='detail'>专家详情</div>
+<script>
+function showDetail() {
+	var b = document.body;
+	b.className = b.className ? '' : 'detail';
+}
+var data = {
+	yuxueqing: ['余学清', '主任医师、教授', '中山医科大学第一附属医院 肾内科'],
+	chenminhu: ['陈旻湖', '主任医师、教授', '中山医科大学第一附属医院 消化内科'],
+	yangxiuyan: ['杨岫岩', '主任医师、教授', '中山医科大学第一附属医院 风湿内科'],
+};
+var s = '';
+for (var k in data) {
+	var a = data[k];
+	s += "<div class='it'><img class='tn' src='images/" + k + ".png'><div class='hd'><strong>" + a[0] + "</strong>　" + a[1];
+	s += "</div><div class='bd'>" + a[2] + "</div><div class='bd'>擅长：</div></div>";
+}
+document.getElementById('list').innerHTML = s;
+</script>
 </body>
 </html>
