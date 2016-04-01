@@ -56,6 +56,8 @@ function showDetail() {
 	b.className = b.className ? '' : 'detail';
 }
 var data = {
+	longhao: ['龙浩', '主任医师、教授', '中山大学肺癌研究所所长', ''],
+	jialiuping: ['贾柳萍', '主任医师、教授', '佛山市南方医科大学附属南海医院大内科主任兼消化科主任', ''],
 	yuxueqing: ['余学清', '主任医师、教授', '中山医科大学第一附属医院 肾内科'],
 	chenminhu: ['陈旻湖', '主任医师、教授', '中山医科大学第一附属医院 消化内科'],
 	yangxiuyan: ['杨岫岩', '主任医师、教授', '中山医科大学第一附属医院 风湿内科'],
@@ -63,7 +65,7 @@ var data = {
 var s = '';
 for (var k in data) {
 	var a = data[k];
-	s += "<div class='it'><img class='tn' src='images/" + k + ".png'><div class='hd'><strong>" + a[0] + "</strong>　" + a[1];
+	s += "<div class='it'><img class='tn' src='photos/" + k + ".bmp'><div class='hd'><strong>" + a[0] + "</strong> " + a[1];
 	s += "</div><div class='bd'>" + a[2] + "</div><div class='bd'>擅长：</div></div>";
 }
 document.getElementById('list').innerHTML = s;
