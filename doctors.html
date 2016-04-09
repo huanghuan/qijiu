@@ -34,8 +34,9 @@ b {
 	width: 100%;
 	height: 100%;
 	top: 0;
-	background: #fff;
-	padding: 1.5em;
+	background: #fff url('images/green-bg.jpg');
+	background-size: cover;
+	padding: 1em;
 }
 .pop .tn {
 	border-radius: 3em;
@@ -107,16 +108,14 @@ for (var k in data) {
 	s += "</div><div>职务：" + a[2] + "</div><div>专长：" + a[3] + "</div></div>";
 }
 document.getElementById('list').innerHTML = s;
-document.body.onclick = function(e) {
-	var p = document.querySelector('.pop');
-	if (p) {
-		p.className = 'it';
-		return;
-	}
+document.getElementById('list').onclick = function(e) {
 	e = e.target;
 	while (e) {
 		if (e.className == 'it') {
 			e.className = 'pop';
+			break;
+		} else if (e.className == 'pop') {
+			e.className = 'it';
 			break;
 		}
 		e = e.parentNode;
