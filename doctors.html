@@ -8,11 +8,11 @@
 body {
 	margin: 0;
 }
-.it {
+#list .it {
 	border-bottom: 1px dashed #ccc;
 	padding: 0.75em;
 }
-.it .tn {
+#list .tn {
 	border-radius: 2.4em;
 	float: left;
 	width: auto;
@@ -23,60 +23,42 @@ b {
 	color: #07c;
 	display: block;
 }
-.it div {
+#list > div > div {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.pop {
-	position: fixed;
-	box-sizing: border-box;
-	width: 100%;
-	height: 100%;
-	top: 0;
+#detail {
 	background: #fff url('images/green-bg.jpg');
 	background-size: cover;
+	box-sizing: border-box;
+	display: none;
+	min-height: 100%;
 	padding: 1em;
 }
-.pop .tn {
+#detail .tn {
 	border-radius: 3em;
 	width: auto;
 	height: 6em;
 	display: block;
 	margin: 0 auto;
 }
-.pop b {
+#detail b {
 	text-align: center;
 }
-.pop div {
+#detail > div > div {
 	margin-top: 1em;
 }
-<!--
-#detail {
-	position: fixed;
-	background: #ffc;
-	_border-top: 0.5em solid #07c;
-	top: 100%;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	transition: all 0.5s;
+.show-detail #list {
+	display: none;
 }
-.detail #detail {
-	top: 0;
-	opacity: 0.9;
+.show-detail #detail {
+	display: block;
 }
-<div id='detail'>专家详情</div>
-function showDetail() {
-	var b = document.body;
-	b.className = b.className ? '' : 'detail';
-}
--->
 </style>
 </head>
 <body>
-<div style='padding:1em;background:#07c;color:#fff;text-align:center'>排名不分先后，以姓名拼音为序</div>
-<div id='list'></div>
+<div id='list'><div style='padding:1em;background:#07c;color:#fff;text-align:center'>排名不分先后，以姓名拼音为序</div></div><div id='detail' onclick='window.history.back()'></div>
 <script>
 var data = {
 	chenxiaolan: ['陈小岚', '教授，主任医师，研究生导师', '深圳大学附属医院肛肠外科主任、教研室主任、学科带头人。中华医学会结直肠肛门外科全国委员，中国中医药肛肠专业委员会常务委员和广东省副主委，中国中西医结合学会大肠肛门病专业委员会全国委员。中国医师协会肿瘤外科医师学会全国委员', '治疗慢性顽固性便秘、结肠炎、肠粘连、肠梗阻等各种肛肠疾病；最新技术开展各种高难复杂微创肛肠手术'],
@@ -89,7 +71,7 @@ var data = {
 	liuhongji: ['刘泓基', '副主任医师，副教授，医学硕士，硕士生导师，加拿大魁北克省认证自然疗法师，国家功效营养师', '深圳市宝安区中医院内镜中心主任，脾胃科顾问。中华医学会广西内镜分会第四届专业委员会副主任委员，深圳市中医药学会消化病专业委员会常务委员', '内科，脾胃科，功效营养学，养生健康管理等'],
 	liuxiaojian: ['刘小健', '副教授，主任医师，硕士研究生导师', '广西医科大学第一附属医院结直肠外科。《结直肠肛门外科》杂志编委', '结直肠肿瘤、结直肠炎性疾病、功能性疾病、肛门疾病的治疗等'],
 	longhao: ['龙浩', '教授、主任医师、硕士生导师、临床医学博士', '中山大学肺癌研究所所长，中山大学肿瘤医院肺癌首席专家，中山大学肺癌专家委员会主任、首席专家，中山大学肿瘤医院胸科副主任，中山大学肿瘤医院临床医学科学家，广东省乳腺癌专业委员会副主任委员，广东省微创外科协会委员，中国医师协会胸科医师分会肺癌专家委员会委员，‘Thoracic Cancer’编委', '微创胸外科、胸腔镜，胸壁重建。擅长肺癌，食道癌、乳腺癌的综合治疗'],
-	luchun: ['陆春', '教授，主任医师，硕士/博士生导师', '中山大学附属第三医院皮肤科副主任。中华医学会广东皮肤性病学分会副主任委员，中国医师学会广东省皮肤性病学分会常委。《皮肤性病学诊疗学杂志》编委', '失眠症，焦虑症，抑郁症，心理咨询脑缺血，脑梗，脑血管介入手术，非常擅长脑血管介入手术治疗脑梗。擅长各种常见和疑难性皮肤病、性传播疾病的临床诊治'],
+	luchun: ['陆春', '教授，主任医师，硕士/博士生导师', '中山大学附属第三医院皮肤科副主任。中华医学会广东皮肤性病学分会副主任委员，中国医师学会广东省皮肤性病学分会常委。《皮肤性病学诊疗学杂志》编委', '各种常见和疑难性皮肤病、性传播疾病的临床诊治'],
 	luobin: ['罗斌', '博士，主任法医师', '现任中山大学法医鉴定中心副主任，中山大学法医病理鉴定室主任（十家国家级司法鉴定机构之一），中国法医学会病理学专业委员会副主任委员，中国合格评定国家认可委员会、国家法庭科学/司法鉴定机构资质认定技术评审员，中华医学会心血管病理学组委员，广东省法医学会常务理事，民盟广东省第十三届社会和法制委员会副主任，中华医学会、广东省医学会、广州市医学会三级医疗事故技术鉴定专家，中华医学会、广东省、广州市预防接种异常反应调查诊断专家组成员，广东省司法厅司法鉴定专家委员会委员，广州市公安局法医学顾问专家，国家自然科学基金评审专家，广东省医学会医事法学分会常委', '法医学教学、科研及检案工作'],
 	luoxuequn: ['罗学群', '教授，主任医师，博士生导师', '中山大学附属第一医院儿科血液专科主任。中国抗癌协会小儿肿瘤专业委员会常务委员，广东抗癌协会小儿肿瘤专业委员会候任主委，广东医学会儿科分会委员兼免疫学组副组长，广东医学会罕见病分会常委，华南地区儿童急性早幼粒细胞白血病诊疗协作组负责人', '儿童血液病和肿瘤包括白血病等，以及在儿童免疫相关性疾病包括系统性红斑狼疮，幼年特发性关节炎，肺含铁血黄素沉着症等的诊治有较高的造诣'],
 	pengbo: ['彭波', '教授，主任医师，研究生导师', '中国超声医学工程学会浅表器官及外周血管专业委员会常务委员，深圳市超声医学工程学会常务委员，深圳市医师协会超声医师分会常务委员，广东省医师协会超声分会委员，深圳市医学会超声专业委员会委员', '超声波，B超，彩超'],
@@ -107,16 +89,14 @@ for (var k in data) {
 	s += "<div id='" + k + "' class='it'><img class='tn' src='photos/" + k + ".jpg'><b>" + a[0] + "</b><div>职称：" + a[1];
 	s += "</div><div>职务：" + a[2] + "</div><div>专长：" + a[3] + "</div></div>";
 }
-var list = document.getElementById('list');
-list.innerHTML = s;
-list.onclick = function(e) {
-	e = e.target;
+var list = document.getElementById('list'), detail = document.getElementById('detail');
+list.innerHTML += s;
+list.onclick = function(event) {
+	var e = event.target;
 	while (e) {
 		if (e.className == 'it') {
 			window.location.assign('#' + e.id);
-			break;
-		} else if (e.className == 'pop') {
-			window.history.back();
+			event.stopPropagation();
 			break;
 		}
 		e = e.parentNode;
@@ -125,9 +105,10 @@ list.onclick = function(e) {
 window.onhashchange = function() {
 	var h = window.location.hash;
 	if (h) {
-		document.getElementById(h.substring(1)).className = 'pop';
+		document.body.className = 'show-detail';
+		detail.innerHTML = document.getElementById(h.substring(1)).outerHTML;
 	} else {
-		document.querySelector('.pop').className = 'it';
+		document.body.className = '';
 	}
 }
 </script>
