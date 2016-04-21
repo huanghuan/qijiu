@@ -4,6 +4,7 @@ html {
 }
 img {
 	border: 0;
+	vertical-align: middle;
 }
 .comments {
 	margin: 2em;
