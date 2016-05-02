@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.3.min.js'></script>
+<link rel="stylesheet" href="common.css">
+<style>
+body {
+	margin: 0;
+}
+#menu {
+	background: #07c;
+	text-align: center;
+}
+#menu a {
+	color: #fff;
+	display: inline-block;
+	line-height: 48px;
+	text-decoration: none;
+	width: 160px;
+}
+#menu div {
+	display: none;
+	position: absolute;
+	width: 160px;
+}
+#menu div a {
+	background: #69c;
+}
+#menu div a:hover {
+	background: #07c;
+}
+.active {
+	background: #69c;
+}
+</style>
+</head>
+<body>
+<div style='background:url(images/wide.jpg);height:400px;'>
+<div id='menu'>
+	<a style='width:320px;text-align:left;'><img src='images/logo-b.png'></a>
+	<a href='#'>关于我们</a><div>
+		<a href='d-about.html'>公司简介</a>
+		<a href='d-doctors.html'>专家介绍</a>
+		<a href='#'>联系我们</a>
+		<a href='#'>加入我们</a>
+	</div>
+	<a href='#'>服务内容</a><div>
+		<a href='d-services.html#health'>健康管理</a>
+		<a href='d-services.html#clinical'>门诊中心</a>
+		<a href='d-services.html#imaging'>影像中心</a>
+		<a href='d-services.html#consulting'>医疗咨询</a>
+		<a href='d-services.html#hospital'>专科医院</a>
+		<a href='d-membership.html'>柒玖会员</a>
+	</div>
+	<a href='#'>资讯</a><div>
+		<a href='#'>公司动态</a>
+		<a href='#'>健康资讯</a>
+		<a href='#'>行业新闻</a>
+	</div>
+	<a href='#'>微信公众号</a><div><img src='images/qrcode_for_gh_1894a1a3877f_258.jpg'></div>
+</div>
+</div>
+<p style='background:#69c;color:#fff'>健康管理
+专家门诊
+医疗咨询
+远程医疗</p>
+<p style='color:#999;text-align:center'>Copyright &copy; 2016 广州柒玖医疗发展有限公司 ｜ 粤ICP备</p>
+<script>
+var m, d;
+function hideMenu() {
+	if (m) {
+		m.className = '';
+		m = null;
+	}
+	if (d) {
+		$(d).hide();
+		d = null;
+	}
+}
+$('#menu>a').mouseenter(function(event) {
+	hideMenu();
+	m = event.target, d = m.nextSibling;
+	if (d && d.tagName == 'DIV') {
+		m.className = 'active';
+		$(d).css({
+			left: $(m).offset().left
+		}).show();
+	}
+});
+</script>
+</body>
+</html>
