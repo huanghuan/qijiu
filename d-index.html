@@ -6,66 +6,83 @@
 <link rel="stylesheet" href="common.css">
 <style>
 body {
-	margin: 0;
+	margin: 0 auto;
+	width: 1280px;
 }
-#menu {
-	background: #07c;
+#header {
 	text-align: center;
 }
-#menu a {
-	color: #fff;
-	display: inline-block;
-	line-height: 48px;
+#header a {
+	color: #07c;
+	display: block;
+	line-height: 32px;
 	text-decoration: none;
-	width: 160px;
 }
-#menu div {
+#header a.active {
+	background: #def;
+}
+#header div {
+	background: #fff;
+	border: 1px solid #ccc;
 	display: none;
+	opacity: 0.75;
+	padding: 16px 0;
 	position: absolute;
-	width: 160px;
+	top: 80px;
+	width: 158px;
 }
-#menu div a {
-	background: #69c;
-}
-#menu div a:hover {
+#header div a:hover {
 	background: #07c;
+	color: #fff;
 }
-.active {
-	background: #69c;
+#footer {
+	border-top: 1px solid #ccc;
+	color: #999;
+	line-height: 1.5;
+	margin: 1em auto;
+	width: 1280px;
 }
 </style>
 </head>
 <body>
-<div id='menu'>
-	<a style='width:320px;text-align:left;'><img src='images/logo-b.png'></a>
-	<a href='#'>关于我们</a><div>
+<p><table id='header' cellpadding='0' cellspacing='0'><tr>
+	<td width='480' align='left'><img src='images/logo2.png'></td>
+	<td width='160'><a href='d-index.html'>首页</a></td>
+	<td width='160'><a href='#'>关于我们</a><div>
 		<a href='d-about.html'>公司简介</a>
-		<a href='d-doctors.html'>专家团队</a>
 		<a href='#'>联系我们</a>
 		<a href='#'>加入我们</a>
-	</div>
-	<a href='#'>服务内容</a><div>
+	</div></td>
+	<td width='160'><a href='#'>医疗服务</a><div>
 		<a href='d-services.html#health'>健康管理</a>
+		<a href='d-services.html#consulting'>医疗咨询</a>
+		<a href='d-membership.html'>远程会诊</a>
 		<a href='d-services.html#clinical'>门诊中心</a>
 		<a href='d-services.html#imaging'>影像中心</a>
-		<a href='d-services.html#consulting'>医疗咨询</a>
 		<a href='d-services.html#hospital'>专科医院</a>
-		<a href='d-membership.html'>柒玖会员</a>
-	</div>
-	<a href='#'>资讯</a><div>
+	</div></td>
+	<td width='160'><a href='#'>就医信息</a><div>
+		<a href='d-doctors.html'>专家介绍</a>
+		<a href='#'>出诊时间</a>
+		<a href='#'>预约就诊</a>
+	</div></td>
+	<td width='160'><a href='#'>健康信息</a><div>
 		<a href='#'>公司动态</a>
 		<a href='#'>健康资讯</a>
 		<a href='#'>行业新闻</a>
-	</div>
-	<a href='#'>微信公众号</a><div><img src='images/qrcode_for_gh_1894a1a3877f_258.jpg'></div>
-</div>
-<div style='background:url(images/wide.jpg);height:400px;'>
-</div>
-<p style='background:#69c;color:#fff'>健康管理
-专家门诊
-医疗咨询
-远程医疗</p>
-<p style='color:#999;text-align:center'>Copyright &copy; 2016 广州柒玖医疗发展有限公司 ｜ 粤ICP备</p>
+	</div></td>
+</tr></table></p>
+<div><img src='images/title.jpg'></div>
+
+<div id='footer'><table cellpadding='0' cellspacing='0'><tr>
+<td width='640'>版权所有：广州柒玖医疗发展有限公司<br>
+经营许可证编号：粤ICP备12345678号<br>
+互联网医疗卫生信息服务许可证：京卫网审[2015]第0035号</td>
+<td width='480'>电话　　　　：　020-12345678<br>
+电子邮件　　：　qijiuhealthcare@hotmail.com<br>
+微信公众号　：　柒玖医疗　（扫描二维码关注→）</td>
+<td width='160'><img src='images/qr-code.png'></td>
+</tr></table></div>
 <script>
 var m, d;
 function hideMenu() {
@@ -78,13 +95,13 @@ function hideMenu() {
 		d = null;
 	}
 }
-$('#menu>a').mouseenter(function(event) {
+$('#header td>a').mouseenter(function(event) {
 	hideMenu();
 	m = event.target, d = m.nextSibling;
+	m.className = 'active';
 	if (d && d.tagName == 'DIV') {
-		m.className = 'active';
 		$(d).css({
-			left: $(m).offset().left
+			left: $(m.parentNode).offset().left
 		}).show();
 	}
 });
