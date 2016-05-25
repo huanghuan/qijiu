@@ -19,7 +19,7 @@ body {
 	text-decoration: none;
 }
 #header a.active {
-	background: #def;
+	background: #cef;
 }
 #header div {
 	background: #fff;
@@ -28,7 +28,7 @@ body {
 	opacity: 0.75;
 	padding: 16px 0;
 	position: absolute;
-	top: 80px;
+	top: 96px;
 	width: 158px;
 }
 #header div a:hover {
@@ -37,16 +37,41 @@ body {
 }
 #footer {
 	border-top: 1px solid #ccc;
-	color: #999;
-	line-height: 1.5;
+	background: url('images/blue.jpg');
+	color: #fff;
+	height: 128px;
+	line-height: 2;
 	margin: 1em auto;
-	width: 1280px;
+}
+#sidebar {
+	background: #fff;
+	border: solid 1px #ccc;
+	padding: 1em;
+	text-align: center;
+	position: fixed;
+	right: 80px;
+	top: 160px;
+}
+#sidebar div {
+	background: #07c;
+	color: #fff;
+	line-height: 2;
+	margin: 0 2em;
+	opacity: 0.75;
+	position: relative;
+	top: -2em;
 }
 </style>
 </head>
 <body>
-<p><table id='header' cellpadding='0' cellspacing='0'><tr>
-	<td width='480' align='left'><img src='images/logo2.png'></td>
+<div id='sidebar'>
+<img src='images/cs.jpg'><div>在线咨询</div>
+<img src='images/qq_.png'><div>QQ客服</div>
+<img src='images/qr-code.png' title='扫描二维码关注微信公众号：柒玖医疗'>
+</div>
+<p></p>
+<table id='header' cellpadding='0' cellspacing='0'><tr>
+	<td width='480' align='left'><img src='images/logo.png'></td>
 	<td width='160'><a href='d-index.html'>首页</a></td>
 	<td width='160'><a href='#'>关于我们</a><div>
 		<a href='d-about.html'>公司简介</a>
@@ -71,17 +96,27 @@ body {
 		<a href='#'>健康资讯</a>
 		<a href='#'>行业新闻</a>
 	</div></td>
-</tr></table></p>
-<div><img src='images/title.jpg'></div>
-
-<div id='footer'><table cellpadding='0' cellspacing='0'><tr>
-<td width='640'>版权所有：广州柒玖医疗发展有限公司<br>
-经营许可证编号：粤ICP备12345678号<br>
-互联网医疗卫生信息服务许可证：京卫网审[2015]第0035号</td>
-<td width='480'>电话　　　　：　020-12345678<br>
-电子邮件　　：　qijiuhealthcare@hotmail.com<br>
-微信公众号　：　柒玖医疗　（扫描二维码关注→）</td>
-<td width='160'><img src='images/qr-code.png'></td>
+</tr></table>
+<p><img src='images/title.jpg'></p>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td width='400'>柒玖会员</td>
+<td width='40'></td>
+<td width='400'>公司动态</td>
+<td width='40'></td>
+<td width='400'>健康信息</td>
+</tr>
+</table>
+<div id='footer'><table cellpadding='0' cellspacing='0' width='100%'><tr>
+<td>版权所有：广州柒玖医疗发展有限公司<br>
+经营许可证编号：粤ICP备########号<br>
+互联网医疗卫生信息服务许可证：粤卫网审（2016）###号</td>
+<td>地址：广州市白云区<br>
+电话：（020）########<br>
+传真：（020）########</td>
+<td>网址：www.qijiuhealthcare.com<br>
+电邮：qijiuhealthcare@hotmail.com<br>
+微信公众号：柒玖医疗</td>
 </tr></table></div>
 <script>
 var m, d;
