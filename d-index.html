@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="common.css">
 <style>
 body {
+	line-height: 2;
 	margin: 0 auto;
 	width: 1280px;
 }
@@ -15,8 +16,6 @@ body {
 #header a {
 	color: #07c;
 	display: block;
-	line-height: 32px;
-	text-decoration: none;
 }
 #header a.active {
 	background: #cef;
@@ -36,12 +35,12 @@ body {
 	color: #fff;
 }
 #footer {
-	border-top: 1px solid #ccc;
-	background: url('images/blue.jpg');
+	background: url('images/footer.jpg');
 	color: #fff;
-	height: 128px;
-	line-height: 2;
-	margin: 1em auto;
+	padding: 1em;
+}
+#footer table {
+	opacity: 0.75;
 }
 #sidebar {
 	background: #fff;
@@ -52,21 +51,40 @@ body {
 	right: 80px;
 	top: 160px;
 }
-#sidebar div {
+#sidebar a {
 	background: #07c;
 	color: #fff;
-	line-height: 2;
+	display: block;
 	margin: 0 2em;
 	opacity: 0.75;
 	position: relative;
 	top: -2em;
 }
+#sidebar a:hover {
+	opacity: 1;
+}
+#columns a {
+	border-bottom: 1px solid #cef;
+	color: #666;
+	display: block;
+}
+#columns header {
+	color: #07c;
+	font-weight: bold;
+}
+#columns img {
+	width: 400px;
+	height: 200px;
+}
+.date {
+	float: right;
+}
 </style>
 </head>
 <body>
 <div id='sidebar'>
-<img src='images/cs.jpg'><div>在线咨询</div>
-<img src='images/qq_.png'><div>QQ客服</div>
+<img src='images/cs.jpg'><a href='#'>在线咨询</a>
+<img src='images/qq_.png'><a href='#'>QQ客服</a>
 <img src='images/qr-code.png' title='扫描二维码关注微信公众号：柒玖医疗'>
 </div>
 <p></p>
@@ -98,13 +116,18 @@ body {
 	</div></td>
 </tr></table>
 <p><img src='images/title.jpg'></p>
-<table cellpadding='0' cellspacing='0'>
+<table id='columns' cellpadding='0' cellspacing='0'>
 <tr>
-<td width='400'>柒玖会员</td>
+<td width='400'><header>柒玖会员</header>
+<img src='http://mmbiz.qpic.cn/mmbiz/yNicPlR25lCmrE9GlyAQjPDyFTNPLqR0qmERGeqR3eiabrQcwTp7exHVoKTeCXoYSalSMvC4axmzlf2WHiaASgCxA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1'>
+<a href='#'>柒玖会员<span class='date'>2016-04-19</span></a>
+<a href='#'>柒玖会员<span class='date'>2016-04-19</span></a>
+<a href='#'>柒玖会员<span class='date'>2016-04-19</span></a>
+</td>
 <td width='40'></td>
-<td width='400'>公司动态</td>
+<td width='400'><header>公司动态</header></td>
 <td width='40'></td>
-<td width='400'>健康信息</td>
+<td width='400'><header>健康信息</header></td>
 </tr>
 </table>
 <div id='footer'><table cellpadding='0' cellspacing='0' width='100%'><tr>
