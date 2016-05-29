@@ -30,7 +30,7 @@ s+="</tr></table>";
 s+="</div>";
 s+="<div id='sidebar'>";
 s+="<img src='images/cs.jpg'><a href='#'>在线咨询</a>";
-s+="<img src='images/qq_.png'><a href='#'>QQ客服</a>";
+s+="<img src='images/qq.png'><a href='#'>QQ客服</a>";
 s+="<img src='images/qr-code.png' title='扫描二维码关注微信公众号：柒玖医疗'>";
 s+="</div>";
 document.write(s);
