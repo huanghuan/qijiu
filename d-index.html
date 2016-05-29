@@ -1,168 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>柒玖医疗</title>
 <meta charset="UTF-8">
 <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.3.min.js'></script>
-<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="d-common.css">
 <style>
-body {
-	line-height: 2;
-	margin: 0 auto;
-	width: 1280px;
+#columns {
+	margin-top: -64px;
+	margin-bottom: 64px;
 }
-#header {
+#columns div {
 	text-align: center;
-}
-#header a {
-	color: #07c;
-	display: block;
-}
-#header a.active {
-	background: #cef;
-}
-#header div {
-	background: #fff;
-	border: 1px solid #ccc;
-	display: none;
-	opacity: 0.75;
-	padding: 16px 0;
-	position: absolute;
-	top: 96px;
-	width: 158px;
-}
-#header div a:hover {
-	background: #07c;
-	color: #fff;
-}
-#footer {
-	background: url('images/footer.jpg');
-	color: #fff;
-	padding: 1em;
-}
-#footer table {
-	opacity: 0.75;
-}
-#sidebar {
-	background: #fff;
-	border: solid 1px #ccc;
-	padding: 1em;
-	text-align: center;
-	position: fixed;
-	right: 80px;
-	top: 160px;
-}
-#sidebar a {
-	background: #07c;
-	color: #fff;
-	display: block;
-	margin: 0 2em;
-	opacity: 0.75;
-	position: relative;
-	top: -2em;
-}
-#sidebar a:hover {
-	opacity: 1;
 }
 #columns a {
 	border-bottom: 1px solid #cef;
 	color: #666;
 	display: block;
 }
-#columns header {
+#columns a:hover {
 	color: #07c;
-	font-weight: bold;
 }
-#columns img {
-	width: 400px;
-	height: 200px;
-}
-.date {
+#columns span {
 	float: right;
 }
 </style>
 </head>
 <body>
-<div id='sidebar'>
-<img src='images/cs.jpg'><a href='#'>在线咨询</a>
-<img src='images/qq_.png'><a href='#'>QQ客服</a>
-<img src='images/qr-code.png' title='扫描二维码关注微信公众号：柒玖医疗'>
-</div>
-<p></p>
-<table id='header' cellpadding='0' cellspacing='0'><tr>
-	<td width='480' align='left'><img src='images/logo.png'></td>
-	<td width='160'><a href='d-index.html'>首页</a></td>
-	<td width='160'><a href='#'>关于我们</a><div>
-		<a href='d-about.html'>公司简介</a>
-		<a href='#'>联系我们</a>
-		<a href='#'>加入我们</a>
-	</div></td>
-	<td width='160'><a href='#'>医疗服务</a><div>
-		<a href='d-services.html#health'>健康管理</a>
-		<a href='d-services.html#consulting'>医疗咨询</a>
-		<a href='d-membership.html'>远程会诊</a>
-		<a href='d-services.html#clinical'>门诊中心</a>
-		<a href='d-services.html#imaging'>影像中心</a>
-		<a href='d-services.html#hospital'>专科医院</a>
-	</div></td>
-	<td width='160'><a href='#'>就医信息</a><div>
-		<a href='d-doctors.html'>专家介绍</a>
-		<a href='#'>出诊时间</a>
-		<a href='#'>预约就诊</a>
-	</div></td>
-	<td width='160'><a href='#'>健康信息</a><div>
-		<a href='#'>公司动态</a>
-		<a href='#'>健康资讯</a>
-		<a href='#'>行业新闻</a>
-	</div></td>
-</tr></table>
-<p><img src='images/title.jpg'></p>
+<script src='header.js'></script>
+<a href='d-membership.html'><img src='images/title.jpg'></a>
 <table id='columns' cellpadding='0' cellspacing='0'>
 <tr>
-<td width='400'><header>柒玖会员</header>
-<img src='http://mmbiz.qpic.cn/mmbiz/yNicPlR25lCmrE9GlyAQjPDyFTNPLqR0qmERGeqR3eiabrQcwTp7exHVoKTeCXoYSalSMvC4axmzlf2WHiaASgCxA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1'>
-<a href='#'>柒玖会员<span class='date'>2016-04-19</span></a>
-<a href='#'>柒玖会员<span class='date'>2016-04-19</span></a>
-<a href='#'>柒玖会员<span class='date'>2016-04-19</span></a>
+<td width='400'><div><img src='images/taocan.png'></div>
+<img src='images/checkup.jpg'>
+<a href='#'>成人体检套餐<span>05-29</span></a>
+<a href='#'>女士体检套餐<span>05-29</span></a>
+<a href='#'>出国体检套餐<span>05-29</span></a>
 </td>
 <td width='40'></td>
-<td width='400'><header>公司动态</header></td>
+<td width='400'><div><img src='images/dongtai.png'></div>
+<img src='images/opening.jpg'>
+<a href='http://mp.weixin.qq.com/s?__biz=MzIyODI0NTk0MA==&mid=509417119&idx=2&sn=00f9b3b347cfe77eccfeda986ebc5a4b#rd'>柒玖大咖秀｜她用超声波探索着“大世界”<span>05-26</span></a>
+<a href='http://mp.weixin.qq.com/s?__biz=MzIyODI0NTk0MA==&mid=509417048&idx=1&sn=ee28ed16d23a4f8b38c78d84fcccf1ff#rd'>柒玖医疗开业庆典<span>04-30</span></a>
+<a href='http://mp.weixin.qq.com/s?__biz=MzIyODI0NTk0MA==&mid=509417001&idx=1&sn=a358e295d538d7f079ad9c111e5d043c#rd'>柒玖健康讲座｜耳鼻喉恶性肿瘤与致命性疾病防治<span>04-19</span></a>
+</td>
 <td width='40'></td>
-<td width='400'><header>健康信息</header></td>
+<td width='400'><div><img src='images/zixun.png'></div>
+<img src='images/doctor.jpg'>
+<a href='http://mp.weixin.qq.com/s?__biz=MzIyODI0NTk0MA==&mid=509417119&idx=4&sn=6bdaa3d65452574177d5fef6562a7fc3#rd'>“家庭医生”已成为医疗发展的大趋势<span>05-26</span></a>
+<a href='http://mp.weixin.qq.com/s?__biz=MzIyODI0NTk0MA==&mid=509417080&idx=2&sn=79384aa46025215018ca12e25dcfaaf7#rd'>关于癌症的最强深度科普<span>05-13</span></a>
+<a href='http://mp.weixin.qq.com/s?__biz=MzIyODI0NTk0MA==&mid=509417012&idx=3&sn=f1af3df9df7976a432ed8cd17f2f0a15#rd'>什么是“精准医疗”？漫画告诉你！<span>05-27</span></a>
+</td>
 </tr>
 </table>
-<div id='footer'><table cellpadding='0' cellspacing='0' width='100%'><tr>
-<td>版权所有：广州柒玖医疗发展有限公司<br>
-经营许可证编号：粤ICP备########号<br>
-互联网医疗卫生信息服务许可证：粤卫网审（2016）###号</td>
-<td>地址：广州市白云区<br>
-电话：（020）########<br>
-传真：（020）########</td>
-<td>网址：www.qijiuhealthcare.com<br>
-电邮：qijiuhealthcare@hotmail.com<br>
-微信公众号：柒玖医疗</td>
-</tr></table></div>
-<script>
-var m, d;
-function hideMenu() {
-	if (m) {
-		m.className = '';
-		m = null;
-	}
-	if (d) {
-		$(d).hide();
-		d = null;
-	}
-}
-$('#header td>a').mouseenter(function(event) {
-	hideMenu();
-	m = event.target, d = m.nextSibling;
-	m.className = 'active';
-	if (d && d.tagName == 'DIV') {
-		$(d).css({
-			left: $(m.parentNode).offset().left
-		}).show();
-	}
-});
-</script>
+<script src='footer.js'></script>
 </body>
 </html>

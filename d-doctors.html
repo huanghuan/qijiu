@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>专家介绍（部分）</title>
+<title>关于我们</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
 <script src="jquery-1.4.4.min.js" type="text/javascript"></script>
-<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="d-common.css">
 <link rel="stylesheet" href="reveal.css">
 <style>
-body {
-	margin: 0 auto;
-	max-width: 1080px;
-}
 #list {
 	margin: 0 auto;
 }
 #list .it {
-	border-bottom: 1px dashed #ccc;
+	border: 1px solid #ccc;
 	display: inline-block;
-	margin: 0 0.5em;
+	margin: 0.5em;
 	padding: 1em;
-	width: 30em;
+	width: 36em;
 }
 #list .tn {
-	border-radius: 2.4em;
+	border-radius: 3em;
 	float: left;
 	width: auto;
-	height: 4.8em;
-	margin-right: 0.75em;
+	height: 6em;
+	margin-right: 1em;
 }
 b {
 	color: #07c;
 	display: block;
+	font-size: 125%;
+}
+i {
+	color: #07c;
+	font-style: normal;
 }
 #list > div > div {
 	overflow: hidden;
@@ -39,8 +39,10 @@ b {
 	white-space: nowrap;
 }
 #modal {
-	background: #fff url('images/green-bg.jpg');
+	background: #fff url('images/modal.jpg');
 	background-size: cover;
+	width: 800px;
+	height: 500px;
 }
 #modal .tn {
 	border-radius: 3em;
@@ -55,16 +57,15 @@ b {
 #modal > div > div {
 	margin-top: 1em;
 }
-.show-modal #list {
-	-display: none;
-}
 .show-modal #modal {
 	display: block;
 }
 </style>
 </head>
 <body>
-<div id='list'><div style='padding:1em;background:#07c;color:#fff;text-align:center;'>排名不分先后，以姓名拼音为序</div></div><div class='reveal-modal' id='modal'></div>
+<script src='header.js'></script>
+<div id='list'><div style='background:#07c;color:#fff;text-align:center;'>柒玖医疗部分专家介绍（排名不分先后，以姓名拼音为序）</div></div><div class='reveal-modal' id='modal'></div>
+<script src='footer.js'></script>
 <script>
 var data = {
 	chenxiaolan: ['陈小岚', '教授，主任医师，研究生导师', '深圳大学附属医院肛肠外科主任、教研室主任、学科带头人。中华医学会结直肠肛门外科全国委员，中国中医药肛肠专业委员会常务委员和广东省副主委，中国中西医结合学会大肠肛门病专业委员会全国委员。中国医师协会肿瘤外科医师学会全国委员', '治疗慢性顽固性便秘、结肠炎、肠粘连、肠梗阻等各种肛肠疾病；最新技术开展各种高难复杂微创肛肠手术'],
@@ -92,8 +93,8 @@ var data = {
 var s = '';
 for (var k in data) {
 	var a = data[k];
-	s += "<div id='" + k + "' class='it'><img class='tn' src='photos/" + k + ".jpg'><b>" + a[0] + "</b><div>职称：" + a[1];
-	s += "</div><div>职务：" + a[2] + "</div><div>专长：" + a[3] + "</div></div>";
+	s += "<div id='" + k + "' class='it'><img class='tn' src='photos/" + k + ".jpg'><b>" + a[0] + "</b><div><i>职称：</i>" + a[1];
+	s += "</div><div><i>职务：</i>" + a[2] + "</div><div><i>专长：</i>" + a[3] + "</div></div>";
 }
 var list = document.getElementById('list'), modal = document.getElementById('modal');
 list.innerHTML += s;
