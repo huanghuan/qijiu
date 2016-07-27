@@ -1,12 +1,12 @@
 var s="";
 s+="<div id='footer'><table cellpadding='0' cellspacing='0'><tr>";
 s+="<td>广州柒玖医疗发展有限公司　版权所有<br>";
-s+="粤ICP备########号<br>";
-s+="粤卫网审（2016）###号</td>";
+s+="粤ICP备16067818号<br>";
+//s+="粤卫网审（2016）###号</td>";
 s+="<td>地址：广州市白云区龙归攀龙创意园4楼401-411<br>";
 s+="电话：（020）36796590<br>";
-s+="传真：（020）########</td>";
-s+="<td>网址：www.qijiuhealthcare.com<br>";
+//s+="传真：（020）########</td>";
+s+="<td>网址：www.79healthcare.com<br>";
 s+="电邮：qijiuhealthcare@hotmail.com<br>";
 s+="微信公众号：柒玖医疗</td>";
 s+="</tr></table></div>";
